@@ -24,7 +24,7 @@ public class UserController{
     @ResponseBody
     @RequestMapping(value = "/list.json")
     public List list(PageForm pageForm) throws ParseException {
-        pageForm.addOrderExpr("REAL_NAME", "nlssort(? ,'NLS_SORT=SCHINESE_PINYIN_M') ? nulls last");
+//        pageForm.addOrderExpr("REAL_NAME", "nlssort(? ,'NLS_SORT=SCHINESE_PINYIN_M') ? nulls last");
         return authService.queryByDeptCode("", pageForm.toPageBounds());
     }
 
