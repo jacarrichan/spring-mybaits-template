@@ -1,8 +1,5 @@
 package com.github.miemiedev.smt.web;
 
-import com.github.miemiedev.mybatis.paginator.domain.PageList;
-import com.github.miemiedev.mybatis.paginator.domain.Paginator;
-import com.github.miemiedev.smt.entity.User;
 import com.github.miemiedev.smt.service.AuthService;
 import com.github.miemiedev.smt.web.util.PageForm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.Serializable;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Controller
@@ -43,5 +37,11 @@ public class UserController{
         return new ModelAndView( "account/jstl","users", users);
     }
 
+
+    @ResponseBody
+    @RequestMapping(value = "/test.html")
+    public String test(PageForm pageForm) throws ParseException {
+        return "test";
+    }
 
 }

@@ -20,7 +20,7 @@
 
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
-			<bean class="org.springframework.http.converter.StringHttpMessageConverter"> 
+			<bean class="com.github.miemiedev.smt.web.util.StringTestHttpMessageConverter">
 				<constructor-arg value="UTF-8" />        
 			</bean>
             <ref bean="mappingJackson2HttpMessageConverter" />
